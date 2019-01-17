@@ -1,38 +1,40 @@
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Menu, MenuItem } from './Nav.css'
+import { Button } from 'components'
 
-const Nav = ({ siteTitle }) => (
-  <div
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+const Nav = props => (
+  <Menu>
+    <MenuItem>
+      <Button large to="/" active={props.location === '/'}>
+        Home
+      </Button>
+    </MenuItem>
+    <MenuItem>
+      <Button
+        large
+        to="/portfolio"
+        active={props.location.includes('/portfolio')}
+      >
+        Portfolio
+      </Button>
+    </MenuItem>
+    <MenuItem>
+      <Button large to="/about" active={props.location === '/about/'}>
+        About
+      </Button>
+    </MenuItem>
+    <MenuItem>
+      <Button large to="/about" active={props.location === '/about/'}>
+        Contact
+      </Button>
+    </MenuItem>
+  </Menu>
 )
 
 Nav.propTypes = {
-  siteTitle: PropTypes.string,
+  location: PropTypes.string,
 }
 
 Nav.defaultProps = {

@@ -1,46 +1,42 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 // import { StaticQuery, graphql } from 'gatsby'
 
-import { Nav, LayoutGrid, Fade, Background } from 'src/components'
+import { Nav, LayoutGrid, Logo, Fade, Background } from 'src/components'
 import './layout.css'
 import { FlavorContext } from '../../utils'
 
-class Layout extends Component {
-  render() {
-    let color = ''
-    // if(this.props.location === '/')
-    color =
-      this.props.location === '/'
-        ? 'teal'
-        : this.props.location.includes('portfolio')
-        ? 'lavender'
-        : this.props.location.includes('blog')
-        ? 'orange'
-        : this.props.location.includes('about')
-        ? 'cherry'
-        : this.props.location.includes('contact')
-        ? 'orange'
-        : 'teal'
-    return (
-      <>
-        <Nav siteTitle="Mike Thariath" />
-        <FlavorContext.Provider value={color}>
-          <Fade>
-            <LayoutGrid>
-              <Background flavor={'lavender'} />
-              {/* <Logo /> */}
-              {/* <Nav location={this.props.location} /> */}
-              <div style={{ gridArea: 'main', zIndex: '100' }}>
-                {this.props.children}
-              </div>
-              {/* <Footer /> */}
-            </LayoutGrid>
-          </Fade>
-        </FlavorContext.Provider>
-      </>
-    )
-  }
+const Layout = ({ location, children }) => {
+  let color = ''
+  // if(this.props.location === '/')
+  color =
+    location === '/'
+      ? 'teal'
+      : location.includes('portfolio')
+      ? 'lavender'
+      : location.includes('blog')
+      ? 'orange'
+      : location.includes('about')
+      ? 'cherry'
+      : location.includes('contact')
+      ? 'orange'
+      : 'teal'
+  return (
+    <>
+      <FlavorContext.Provider value={color}>
+        <Fade>
+          <LayoutGrid>
+            <Background />
+            <Logo />
+            <Nav siteTitle="Mike Thariath" location={location} />
+            {/* <Nav location={location} /> */}
+            <div style={{ gridArea: 'main', zIndex: '100' }}>{children}</div>
+            {/* <Footer /> */}
+          </LayoutGrid>
+        </Fade>
+      </FlavorContext.Provider>
+    </>
+  )
 }
 
 Layout.propTypes = {
