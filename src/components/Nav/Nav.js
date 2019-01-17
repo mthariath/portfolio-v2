@@ -7,26 +7,34 @@ import { Button } from 'components'
 const Nav = props => (
   <Menu>
     <MenuItem>
-      <Button large to="/" active={props.location === '/'}>
+      <Button large={1} to="/" active={props.location === '/' ? 1 : undefined}>
         Home
       </Button>
     </MenuItem>
     <MenuItem>
       <Button
-        large
+        large={1}
         to="/portfolio"
-        active={props.location.includes('/portfolio')}
+        active={props.location.includes('/portfolio') ? 1 : undefined}
       >
         Portfolio
       </Button>
     </MenuItem>
     <MenuItem>
-      <Button large to="/about" active={props.location === '/about/'}>
+      <Button
+        large={1}
+        to="/about"
+        active={props.location === '/about/' ? 1 : undefined}
+      >
         About
       </Button>
     </MenuItem>
     <MenuItem>
-      <Button large to="/about" active={props.location === '/about/'}>
+      <Button
+        large={1}
+        to="/about"
+        active={props.location === '/about/' ? 1 : undefined}
+      >
         Contact
       </Button>
     </MenuItem>

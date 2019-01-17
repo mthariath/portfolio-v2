@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
-import { MEDIA } from 'utils'
-import { flavors } from 'utils'
+import { MEDIA, flavors } from 'utils'
 
 export const StyledButton = styled.button`
   padding: 0rem 0rem;
@@ -41,20 +40,15 @@ export const StyledButton = styled.button`
       `}
   }
 
-  &:hover::after,
-  &:active::after,
-  &:focus::after,
-   {
-    
-  }
+
   &:hover,
   &:active,
   &:focus {
     outline: none;
     transform: scale(1.1);
     ::after {
-    width: 100%;
-    left: 0%;
+    /* width: 100%; */
+    /* left: 0%; */
     }
   }
 
@@ -88,6 +82,16 @@ export const StyledButton = styled.button`
         transform: translateY(1.65px);
     }
 
+    `}
+    ${MEDIA.MIN_PHONE`
+          &:hover,
+            &:active,
+            &:focus {
+                ::after {
+                width: 100%;
+                left: 0%;
+                }
+            }
     `}
 
   /* start LARGE button styling */

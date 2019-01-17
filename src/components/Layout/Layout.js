@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import { StaticQuery, graphql } from 'gatsby'
 
-import { Nav, LayoutGrid, Logo, Fade, Background } from 'src/components'
+import { Nav, LayoutGrid, Logo, Fade, Footer, Background } from 'src/components'
 import './layout.css'
 import { FlavorContext } from '../../utils'
 
@@ -24,14 +24,13 @@ const Layout = ({ location, children }) => {
   return (
     <>
       <FlavorContext.Provider value={color}>
-        <Fade>
+        <Fade direction="up">
           <LayoutGrid>
             <Background />
             <Logo />
-            <Nav siteTitle="Mike Thariath" location={location} />
-            {/* <Nav location={location} /> */}
+            <Nav location={location} />
             <div style={{ gridArea: 'main', zIndex: '100' }}>{children}</div>
-            {/* <Footer /> */}
+            <Footer />
           </LayoutGrid>
         </Fade>
       </FlavorContext.Provider>

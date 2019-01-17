@@ -28,7 +28,8 @@ Button.propTypes = {
   href: PropTypes.string,
 
   /* the active prop styles the button as "active" */
-  active: PropTypes.bool,
+  active: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+  large: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
 }
 
 export { Button }
