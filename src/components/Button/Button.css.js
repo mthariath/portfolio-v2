@@ -18,7 +18,7 @@ export const StyledButton = styled.button`
   position: relative;
   z-index: 1;
   border: none;
-  text-decoration: none;
+  text-decoration: none !important;
   &::after {
     content: '';
     position: absolute;

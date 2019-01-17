@@ -2,21 +2,40 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import { Layout, Button } from '../components/'
-import Image from '../components/image'
+import { Layout, Paragraph, ArticleGrid, TitleBox } from '../components/'
 import SEO from '../components/seo'
 
 const IndexPage = ({ location }) => (
   <Layout location={location.pathname}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <Button>asdf</Button>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/">Go to page 2</Link>
+    <ArticleGrid
+      title="Hi There!"
+      subtitle={
+        <>
+          my name is <strong>Mike Thariath</strong>.
+        </>
+      }
+    >
+      <Paragraph>
+        I'm a web developer, product designer,and all around good guy living in
+        Chicago. I love coming up with ideas that make people's lives better.
+      </Paragraph>
+      <Paragraph>
+        While you're here, please feel free to look at{' '}
+        <Link to="/portfolio/">my work</Link> or read about{' '}
+        <Link to="/about/">my life and my skills</Link>.
+      </Paragraph>
+      <Paragraph>
+        If you're working on something awesome&nbsp;
+        <Paragraph as="span" small>
+          (that I can help with,)
+        </Paragraph>
+        &nbsp;I'd love to hear from you!
+      </Paragraph>
+      <TitleBox title="connect with me" grid>
+        asdf
+      </TitleBox>
+    </ArticleGrid>
   </Layout>
 )
 

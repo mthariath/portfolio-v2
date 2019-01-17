@@ -18,8 +18,15 @@ export const Menu = styled.ul`
 `
 
 export const MenuItem = styled.li`
-  margin: 0.4rem 0;
+  margin: 1vh 0;
   ${MEDIA.TABLET`
     margin: 0.2rem;
 `}
+`
+
+export const NavWrapper = styled.nav`
+  grid-area: nav;
+  ${MEDIA.TABLET`
+    grid-area: res-nav;
+  `}
 `

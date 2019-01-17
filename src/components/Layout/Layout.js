@@ -24,12 +24,12 @@ const Layout = ({ location, children }) => {
   return (
     <>
       <FlavorContext.Provider value={color}>
-        <Fade direction="up">
-          <LayoutGrid>
+        <Fade config="gentle">
+          <LayoutGrid flavor={color}>
             <Background />
             <Logo />
             <Nav location={location} />
-            <div style={{ gridArea: 'main', zIndex: '100' }}>{children}</div>
+            <main style={{ gridArea: 'main', zIndex: '100' }}>{children}</main>
             <Footer />
           </LayoutGrid>
         </Fade>

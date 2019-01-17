@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { MEDIA } from 'utils'
+import { MEDIA, flavors } from 'utils'
 export const Container = styled.div`
   display: grid;
   position: relative;
@@ -42,4 +42,34 @@ export const Container = styled.div`
         ". sideBar sideBar sideBar sideBar ."
         "footer footer footer footer footer footer";
   `}
+  /* a {
+    text-decoration: underline;
+    position: relative;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.82, 0.22, 0.44, 1.52);
+    color: ${({ flavor }) => flavors[flavor].pale};
+  }
+
+  a:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+  } */
+
+  a {
+  text-decoration: underline;
+  position: relative;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.82, 0.22, 0.44, 1.52);
+  color: ${({ flavor }) => flavors[flavor].pale};
+
+}
+
+a:hover {
+  color: ${({ flavor }) => flavors[flavor].button};
+}
+
+*::selection {
+  color: ${({ flavor }) => flavors[flavor].button};
+  background: ${({ flavor }) => flavors[flavor].main}
+}
+
 `
