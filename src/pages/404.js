@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Layout } from '../components/'
-import SEO from '../components/seo'
+import { Layout, SEO } from '../components/'
 
 const NotFoundPage = ({ location }) => (
   <Layout location={location.pathname}>

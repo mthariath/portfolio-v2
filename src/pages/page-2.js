@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
 
-import { Layout } from '../components/'
-import SEO from '../components/seo'
+import { Layout, SEO } from '../components/'
 
 const SecondPage = ({ location }) => (
   <Layout location={location.pathname}>

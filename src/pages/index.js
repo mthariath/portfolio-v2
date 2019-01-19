@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import { Layout, Paragraph, ArticleGrid, TitleBox } from '../components/'
-import SEO from '../components/seo'
+import { Layout, Paragraph, ArticleGrid, TitleBox, SEO } from '../components/'
 
 const IndexPage = ({ location }) => (
   <Layout location={location.pathname}>

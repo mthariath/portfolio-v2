@@ -125,4 +125,11 @@ export const StyledTitle = styled.h3`
           }
         }}
     `};
+      ${({ sans }) =>
+        sans &&
+        css`
+          font-family: 'Raleway', sans-serif;
+          text-transform: uppercase;
+          font-weight: 900;
+        `}
 `

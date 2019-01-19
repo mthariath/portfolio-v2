@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Grid, TitleWrapper, ContentWrapper } from './ArticleGrid.css'
 import { TitleBlock } from 'components'
-import { Trail } from 'react-spring'
+import { Trail, config } from 'react-spring'
 
 const ArticleGrid = ({ children, title, subtitle }) => {
   const titleElement = <TitleBlock title={title} subtitle={subtitle} />
@@ -13,6 +13,7 @@ const ArticleGrid = ({ children, title, subtitle }) => {
     <Grid>
       <Trail
         items={items}
+        config={config.slow}
         from={{ transform: 'translate3d(0,75px,0)' }}
         to={{ transform: 'translate3d(0,0px,0)' }}
         keys={items.map((_, i) => i)}

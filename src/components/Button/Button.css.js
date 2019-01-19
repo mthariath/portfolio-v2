@@ -61,9 +61,7 @@ export const StyledButton = styled.button`
             }
             `}
             `}
-    ${MEDIA.MIN_XL`
-        font-size: 4.5rem;
-        `}
+
     ${MEDIA.MIN_TABLET`
         ${MEDIA.DESKTOP`
             &::after {
