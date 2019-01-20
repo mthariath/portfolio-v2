@@ -131,5 +131,9 @@ export const StyledTitle = styled.h3`
           font-family: 'Raleway', sans-serif;
           text-transform: uppercase;
           font-weight: 900;
+          ${MEDIA.DESKTOP`
+          font-weight: 900;
+
+          `}
         `}
 `

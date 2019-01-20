@@ -2,11 +2,10 @@ import React from 'react'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import { FlavorContext } from 'utils'
-import { Title, Paragraph, Chip, Button } from 'components'
+import { Title, Paragraph, Chip, ChipWrapper, Button } from 'components'
 import {
   Wrapper,
   DescriptionBox,
-  ChipWrapper,
   ButtonWrapper,
 } from './PortfolioPageListing.css'
 const PortfolioPageListing = ({ project, style }) => {
@@ -29,6 +28,7 @@ const PortfolioPageListing = ({ project, style }) => {
                 ...main_image.localFile.childImageSharp.fluid,
                 aspectRatio: 1.618 / 1,
               }}
+              alt={title}
             />
             <DescriptionBox flavor={flavor}>
               <Title sans size={6} as="h3">

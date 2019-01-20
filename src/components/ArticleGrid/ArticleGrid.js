@@ -5,7 +5,7 @@ import { TitleBlock } from 'components'
 import { Trail, config } from 'react-spring'
 
 const ArticleGrid = ({ children, title, subtitle }) => {
-  const titleElement = <TitleBlock title={title} subtitle={subtitle} />
+  const titleElement = title && <TitleBlock title={title} subtitle={subtitle} />
 
   const items = [{ title: true, el: titleElement }, children]
 
@@ -31,7 +31,7 @@ const ArticleGrid = ({ children, title, subtitle }) => {
 
 ArticleGrid.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.node.isRequired,
+  title: PropTypes.node,
   subtitle: PropTypes.node,
 }
 

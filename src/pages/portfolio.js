@@ -72,37 +72,6 @@ export const query = graphql`
                 }
               }
             }
-            body {
-              __typename
-              ... on PrismicProjectBodyText {
-                primary {
-                  text {
-                    html
-                  }
-                }
-              }
-              ... on PrismicProjectBodyTitle {
-                primary {
-                  heading {
-                    html
-                  }
-                }
-              }
-              ... on PrismicProjectBodyImage {
-                primary {
-                  caption
-                  image {
-                    localFile {
-                      childImageSharp {
-                        fluid(maxWidth: 2500) {
-                          ...GatsbyImageSharpFluid_noBase64
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         }
       }
