@@ -3,7 +3,7 @@ import { MEDIA } from 'utils'
 
 export const IconGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill minmax(4.1rem 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(4.1rem, 1fr));
   grid-auto-rows: 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;

@@ -18,20 +18,25 @@ export const Box = styled.div`
   ${({ border }) =>
     border &&
     css`
+    &&& {
+
         box-shadow: none;
         padding: 2rem 3rem
         margin: 1rem auto;
+    }
     `}
   ${({ small }) =>
     small &&
     css`
-      box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.2);
-      padding: 1rem 2rem;
-      margin: 1rem auto;
-      max-width: 100rem;
-      ${MEDIA.DESKTOP`
+      &&& {
+        box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.2);
+        padding: 1rem 2rem;
+        margin: 1rem auto;
+        max-width: 100rem;
+        ${MEDIA.DESKTOP`
         padding: 0rem;
         `}
+      }
     `}
 `
 

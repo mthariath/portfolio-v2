@@ -14,4 +14,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   padding: 2rem 3rem;
+  ${MEDIA.TABLET`
+    padding: 1rem;
+  `}
 `

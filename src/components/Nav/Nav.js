@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Trail, config } from 'react-spring'
 import { Menu, MenuItem, NavWrapper } from './Nav.css'
-import { Button } from 'components'
+import { Button, ContactModal } from 'components'
 
 const Nav = props => {
   const menuItems = [
@@ -20,17 +20,21 @@ const Nav = props => {
     <Button
       large={1}
       to="/about"
-      active={props.location === '/about/' ? 1 : undefined}
+      active={props.location === '/about' ? 1 : undefined}
     >
       About
     </Button>,
-    <Button
-      large={1}
-      to="/about"
-      active={props.location === '/about/' ? 1 : undefined}
-    >
-      Contact
-    </Button>,
+    <ContactModal>
+      {toggle => (
+        <Button
+          large={1}
+          active={props.location === '/about/' ? 1 : undefined}
+          onClick={toggle}
+        >
+          Contact
+        </Button>
+      )}
+    </ContactModal>,
   ]
   return (
     <NavWrapper>

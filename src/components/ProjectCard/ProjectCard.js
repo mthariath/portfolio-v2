@@ -12,7 +12,6 @@ const ProjectCard = ({ project }) => {
       main_image,
     },
   } = project
-  console.log(technology)
   return (
     <MediaCard image={main_image.localFile.childImageSharp.fluid} alt={title}>
       <TitleWrapper>

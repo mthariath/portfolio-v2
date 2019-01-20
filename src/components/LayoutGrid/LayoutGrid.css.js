@@ -78,6 +78,7 @@ p {
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Raleway', sans-serif;
+  margin: 0 0 2rem 0;
   ${MEDIA.TABLET`
     font-size: 1rem;
     letter-spacing: 0.5px;

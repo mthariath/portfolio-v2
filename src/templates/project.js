@@ -1,8 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { Layout, SEO, ProjectCard, ArticleGrid, Title } from 'components'
+import {
+  Layout,
+  SEO,
+  ProjectCard,
+  ArticleGrid,
+  Title,
+  ArticleImage,
+} from 'components'
 
 const Project = ({ location, data }) => {
   const {
@@ -20,28 +26,28 @@ const Project = ({ location, data }) => {
       <ArticleGrid>
         <ProjectCard project={data.prismicProject} />
 
-        {body.map(slice => {
+        {body.map((slice, i) => {
           switch (slice.slice_type) {
             case 'text':
             default:
               return (
                 <div
+                  key={i}
                   dangerouslySetInnerHTML={{ __html: slice.primary.text.html }}
                 />
               )
             case 'title':
               return (
-                <Title size={6} as="h3" sans>
+                <Title size={6} as="h3" sans key={i}>
                   {slice.primary.heading.text}
                 </Title>
               )
             case 'image':
               return (
-                <Img
-                  fluid={{
-                    ...slice.primary.image.localFile.childImageSharp.fluid,
-                    aspectRatio: 1.618 / 1,
-                  }}
+                <ArticleImage
+                  key={i}
+                  image={slice.primary.image.localFile.childImageSharp.fluid}
+                  caption={slice.primary.caption}
                 />
               )
           }
