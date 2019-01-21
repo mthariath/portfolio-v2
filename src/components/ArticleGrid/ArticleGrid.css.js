@@ -20,5 +20,4 @@ export const TitleWrapper = styled.div`
 `
 export const ContentWrapper = styled.div`
   grid-area: intro;
-  z-index: 100;
 `

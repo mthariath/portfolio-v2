@@ -57,15 +57,15 @@ const ContactModal = ({ toggle, visible }) => {
           }}
         >
           <TitleBox title="contact me" onClick={e => e.stopPropagation()}>
-            <Paragraph Center>
+            <Paragraph center>
               Interested in working with me?
               <br />
-              <Paragraph Span Small>
+              <Paragraph span small center>
                 Feel free to contact me through any of the channels below.
               </Paragraph>
             </Paragraph>
 
-            <Paragraph Center>
+            <Paragraph center>
               email: <a href="mailto:mike@thariath.com">mike@thariath.com</a>
               <br />
               phone: <a href="tel:2246232760">224-623-2760</a>

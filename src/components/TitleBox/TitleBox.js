@@ -7,7 +7,7 @@ const TitleBox = ({ title, grid, children, ...props }) => {
   return (
     <Box {...props}>
       {title && (
-        <Title size={6} underline>
+        <Title size={props.small ? 6 : 5} underline>
           {title}
         </Title>
       )}
