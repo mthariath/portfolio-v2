@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Raleway:300,800');
 
+/* Modal styling */
+#modal-root * {
+  z-index: 1000;
+}
+
 /* LINK STYLING BEGIN */
 
 a {

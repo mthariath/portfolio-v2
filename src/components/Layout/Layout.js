@@ -29,7 +29,7 @@ const Layout = ({ location, children }) => {
             <Background />
             <Logo />
             <Nav location={location} />
-            <main style={{ gridArea: 'main' }}>{children}</main>
+            <main style={{ gridArea: 'main', zIndex: '100' }}>{children}</main>
             <Footer />
           </LayoutGrid>
         </Fade>
