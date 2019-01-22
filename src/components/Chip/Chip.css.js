@@ -11,6 +11,7 @@ export const Wrapper = styled.span`
   border-radius: 2px;
   margin: ${({ margin }) => (margin ? '0.3rem 0.5rem 0 0' : '0')};
   text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
   ${MEDIA.MIN_XL`
     font-size: 0.85rem;
   `}

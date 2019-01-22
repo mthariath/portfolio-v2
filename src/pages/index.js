@@ -2,11 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import { Layout, Paragraph, ArticleGrid, TitleBox, SEO } from '../components/'
+import {
+  Layout,
+  Paragraph,
+  ArticleGrid,
+  TitleBox,
+  SEO,
+  ContactModal,
+  Button,
+  Icon,
+} from '../components/'
 
 const IndexPage = ({ location }) => (
   <Layout location={location.pathname}>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Mike Thariath / Web Developer + Product Designer"
+      keywords={[
+        `web developer`,
+        `product designer`,
+        `react developer`,
+        `front end developer`,
+      ]}
+    />
     <ArticleGrid
       title="Hi There!"
       subtitle={
@@ -32,7 +49,34 @@ const IndexPage = ({ location }) => (
         &nbsp;I'd love to hear from you!
       </Paragraph>
       <TitleBox title="connect with me" grid>
-        asdf
+        <Button
+          icon
+          ariaLabel="Github"
+          href="https://github.com/mthariath"
+          blank
+        >
+          <Icon icon="github" color="#444444" size="large" />
+        </Button>
+        <Button
+          icon
+          ariaLabel="LinkedIn"
+          href="https://linkedin.com/in/thariath"
+          blank
+        >
+          <Icon icon="linkedin" color="#444444" size="large" />
+        </Button>
+        <Button icon ariaLabel="Email" href="mailto:mike@thariath.com">
+          <Icon icon="email" size="large" />
+        </Button>
+        <ContactModal>
+          {toggle => (
+            <Button icon ariaLabel="Phone" onClick={toggle}>
+              <Icon icon="phone" size="large" />
+            </Button>
+          )}
+        </ContactModal>
+
+        {/* <Button Icon link='#' blank><i class="fab fa-github" /></Button> */}
       </TitleBox>
     </ArticleGrid>
   </Layout>

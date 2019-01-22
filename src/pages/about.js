@@ -41,7 +41,7 @@ const AboutPage = ({ data, location }) => {
   } = data
   return (
     <Layout location={location.pathname}>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="About Me" keywords={[`gatsby`, `application`, `react`]} />
       <ArticleGrid title={title} subtitle={subtitle}>
         <div dangerouslySetInnerHTML={{ __html: first_text }} />
         <TitleBox>
