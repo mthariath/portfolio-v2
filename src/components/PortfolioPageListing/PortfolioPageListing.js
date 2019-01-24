@@ -24,7 +24,7 @@ const PortfolioPageListing = ({ project, style }) => {
       {flavor => {
         return (
           <Wrapper style={style}>
-            <Link to={`/portfolio/${uid}`}>
+            <Link to={`/work/${uid}`}>
               <Img
                 fluid={{
                   ...main_image.localFile.childImageSharp.fluid,
@@ -46,7 +46,7 @@ const PortfolioPageListing = ({ project, style }) => {
                 ))}
               </ChipWrapper>
               <ButtonWrapper>
-                <Button to={`/portfolio/${uid}`}>Read More</Button>
+                <Button to={`/work/${uid}`}>Read More</Button>
               </ButtonWrapper>
             </DescriptionBox>
           </Wrapper>

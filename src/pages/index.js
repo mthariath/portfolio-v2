@@ -38,7 +38,7 @@ const IndexPage = ({ location }) => (
       </Paragraph>
       <Paragraph>
         While you're here, please feel free to look at{' '}
-        <Link to="/portfolio/">my work</Link> or read about{' '}
+        <Link to="/work/">my work</Link> or read about{' '}
         <Link to="/about/">my life and my skills</Link>.
       </Paragraph>
       <Paragraph>
@@ -51,7 +51,7 @@ const IndexPage = ({ location }) => (
       <TitleBox title="connect with me" grid>
         <Button
           icon
-          ariaLabel="Github"
+          aria-label="Github"
           href="https://github.com/mthariath"
           blank
         >
@@ -59,18 +59,18 @@ const IndexPage = ({ location }) => (
         </Button>
         <Button
           icon
-          ariaLabel="LinkedIn"
+          aria-label="LinkedIn"
           href="https://linkedin.com/in/thariath"
           blank
         >
           <Icon icon="linkedin" color="#444444" size="large" />
         </Button>
-        <Button icon ariaLabel="Email" href="mailto:mike@thariath.com">
+        <Button icon aria-label="Email" href="mailto:mike@thariath.com">
           <Icon icon="email" size="large" />
         </Button>
         <ContactModal>
           {toggle => (
-            <Button icon ariaLabel="Phone" onClick={toggle}>
+            <Button icon aria-label="Phone" onClick={toggle}>
               <Icon icon="phone" size="large" />
             </Button>
           )}

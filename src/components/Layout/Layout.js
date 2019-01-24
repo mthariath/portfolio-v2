@@ -12,11 +12,11 @@ const Layout = ({ location, children }) => {
   color =
     location === '/'
       ? 'teal'
-      : location.includes('portfolio')
+      : location.includes('/work')
       ? 'lavender'
-      : location.includes('blog')
+      : location.includes('/blog')
       ? 'orange'
-      : location.includes('about')
+      : location.includes('/about')
       ? 'cherry'
       : location.includes('contact')
       ? 'orange'

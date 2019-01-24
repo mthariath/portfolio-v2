@@ -12,8 +12,8 @@ const Nav = props => {
     </Button>,
     <Button
       large={1}
-      to="/portfolio"
-      active={props.location.includes('/portfolio') ? 1 : undefined}
+      to="/work"
+      active={props.location.includes('/work') ? 1 : undefined}
     >
       Portfolio
     </Button>,
