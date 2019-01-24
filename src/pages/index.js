@@ -16,7 +16,7 @@ import {
 const IndexPage = ({ location }) => (
   <Layout location={location.pathname}>
     <SEO
-      title="Mike Thariath / Web Developer + Product Designer"
+      title="Home"
       keywords={[
         `web developer`,
         `product designer`,

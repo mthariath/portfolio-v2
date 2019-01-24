@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import { FlavorContext } from 'utils'
@@ -22,14 +23,16 @@ const PortfolioPageListing = ({ project, style }) => {
     <FlavorContext.Consumer>
       {flavor => {
         return (
-          <Wrapper tabIndex="0" style={style}>
-            <Img
-              fluid={{
-                ...main_image.localFile.childImageSharp.fluid,
-                aspectRatio: 1.618 / 1,
-              }}
-              alt={title}
-            />
+          <Wrapper style={style}>
+            <Link to={`/portfolio/${uid}`}>
+              <Img
+                fluid={{
+                  ...main_image.localFile.childImageSharp.fluid,
+                  aspectRatio: 1.618 / 1,
+                }}
+                alt={title}
+              />
+            </Link>
             <DescriptionBox flavor={flavor}>
               <Title sans size={6} as="h3">
                 {title}

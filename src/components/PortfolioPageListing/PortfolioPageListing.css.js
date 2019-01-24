@@ -13,16 +13,16 @@ export const Wrapper = styled.article`
     transition: all 0.5s 0s cubic-bezier(0.82, 0.22, 0.44, 1.52);
     outline: none;
   }
-  &:hover > *,
-  &:active > *,
-  &:focus > *,
-  &:focus-within > * {
+  &:hover > a > *,
+  &:active > a > *,
+  &:focus > a > *,
+  &:focus-within > a > * {
     transform: scale(1.05) translateY(-01rem);
     transition: all 0.5s 0s cubic-bezier(0.82, 0.22, 0.44, 1.52);
   }
 
   &,
-  & > * {
+  & > a > * {
     transition: all 0.3s 0.2s cubic-bezier(0.82, 0.22, 0.44, 1.52);
   }
   ${MEDIA.DESKTOP`

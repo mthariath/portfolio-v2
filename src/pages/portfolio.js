@@ -32,10 +32,7 @@ const PortfolioPage = ({ data, location }) => {
   ))
   return (
     <Layout location={location.pathname}>
-      <SEO
-        title="My Work | Mike Thariath / Web Developer + Product Designer"
-        keywords={[`gatsby`, `application`, `react`]}
-      />
+      <SEO title="My Work" keywords={[`gatsby`, `application`, `react`]} />
       <ArticleGrid title="My Work">
         <PortfolioGrid>{items}</PortfolioGrid>
       </ArticleGrid>

@@ -10,6 +10,8 @@ import {
   Title,
   Icon,
   IconGrid,
+  Paragraph,
+  ContactModal,
 } from '../components/'
 
 const IconWrapper = styled.div`
@@ -68,6 +70,26 @@ const AboutPage = ({ data, location }) => {
           </IconWrapper>
         </TitleBox>
         <div dangerouslySetInnerHTML={{ __html: second_text }} />
+        <Paragraph>
+          I'm always looking for cool projects to contribute to. Please don't
+          hesitate to{' '}
+          <ContactModal>
+            {toggle => (
+              <a
+                style={{ cursor: 'pointer' }}
+                href="about"
+                onClick={e => {
+                  e.preventDefault()
+                  toggle()
+                }}
+              >
+                reach out
+              </a>
+            )}
+          </ContactModal>{' '}
+          if there's something I can help with.
+        </Paragraph>
+        <Paragraph>-Mike</Paragraph>
       </ArticleGrid>
     </Layout>
   )

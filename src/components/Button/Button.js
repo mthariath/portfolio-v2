@@ -11,7 +11,14 @@ const Button = ({ to, href, ...props }) => {
         to ? (
           <StyledButton flavor={flavor} as={Link} to={to} {...props} />
         ) : href ? (
-          <StyledButton as="a" href={href} flavor={flavor} {...props} />
+          <StyledButton
+            as="a"
+            href={href}
+            flavor={flavor}
+            target="black"
+            rel="noopener"
+            {...props}
+          />
         ) : (
           <StyledButton flavor={flavor} {...props} />
         )

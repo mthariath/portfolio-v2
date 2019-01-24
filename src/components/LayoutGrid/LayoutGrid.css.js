@@ -74,7 +74,7 @@ a:hover {
 }
 
 /* PARAGRAPH STYLING BEGIN */
-p {
+p, li {
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Raleway', sans-serif;
@@ -126,5 +126,9 @@ p {
         `}
     `}
 }
-
+li {
+  line-height: 1.1;
+  margin: 0;
+  margin-left: 1rem;
+}
 `

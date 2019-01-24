@@ -20,7 +20,7 @@ export const StyledButton = styled.button`
   border: none;
   text-decoration: none !important;
   &::after {
-    content: '';
+  content: ${({ noLine }) => (noLine ? undefined : `''`)};
     position: absolute;
     background-color: ${({ color, flavor }) =>
       color ? flavors[color].button : flavors[flavor].button};
@@ -134,8 +134,8 @@ export const StyledButton = styled.button`
     ${({ icon }) =>
       icon &&
       css`
-        font-size: 32px;
         display: inline;
+        margin: 0.5rem;
         &::after {
           transform: translateY(3px);
           height: 8px;
@@ -148,7 +148,6 @@ export const StyledButton = styled.button`
           height: 8px;
         }
         ${MEDIA.DESKTOP`
-            font-size: 60px;
         `}
       `}
     

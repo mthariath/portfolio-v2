@@ -94,6 +94,12 @@ export const query = graphql`
             }
           }
         }
+        link {
+          url
+        }
+        github {
+          url
+        }
         body {
           __typename
           ... on PrismicProjectBodyText {
