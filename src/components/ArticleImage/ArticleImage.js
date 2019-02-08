@@ -11,7 +11,6 @@ const ArticleImage = ({ image, caption }) => {
         alt={caption}
         fluid={{
           ...image,
-          aspectRatio: 1.618 / 1,
         }}
       />
       <ImageCaption>{caption}</ImageCaption>
